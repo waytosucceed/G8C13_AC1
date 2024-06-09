@@ -1,0 +1,244 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="Logo_last.png">
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.28vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Articles</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;"> 
+
+
+
+                    We often notice the following sitting in front of nouns or their equivalents in a sentence: <br>
+                    ● <span style="color: blue;">&nbsp;&nbsp;&nbsp;A</span>  <br>
+                    ●  <span style="color: blue;">&nbsp;&nbsp;&nbsp;AN</span> <br>
+                    ● <span style="color: blue;">&nbsp;&nbsp;&nbsp;THE</span> <br><br>
+                    They are called  <span style="background-color: yellow;color: blue;"> articles </span>, and they are grouped under the part of speech called: <span style="color: blueviolet;font-style: italic;">  DETERMINERS </span>
+                    
+
+
+                  
+
+
+
+
+
+                    
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+           
+                  
+        </div>
+     
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg","Assets/14.jpg","Assets/15.jpg","Assets/16.jpg","Assets/17.jpg","Assets/18.jpg","Assets/19.jpg","Assets/20.jpg","Assets/21.jpg","Assets/22.jpg","Assets/23.jpg","Assets/24.jpg","Assets/25.jpg"];
+
+            var para=[ "The Dead Sea is situated where the River Jordan ends, just 24 kilometres east of Jerusalem. It is actually a lake. It extends for about 74 kilometres and is 16 kilometres wide - so it is quite small but an extremely deep water body. Its depth is about 300 metres! <br><br>Originally, the Dead Sea was about the same size as today. Then the climate of the area changed and became wetter. This change caused the Dead Sea to grow longer. However, after some time, the climate changed again, and the lake returned to its original size and shape.",
+
+                       "<span style='color: blue;font-style:italic;'>The Dead Sea is situated where the River Jordan ends, just 24 kilometres east of Jerusalem.</span> <br> <br>This is the first sentence of the article you are reading.<br><br>You can notice that the sentence has the following three proper nouns: <br>    <span style='color:blueviolet;'>Dead Sea </span> (Name of a Sea)<br> <span style='color:  blueviolet;'>River Jordan </span> (Name of a River) <br> <span style='color: blueviolet;'>Jerusalem </span> (Name of a Country) <br> <br>  Then why is the article, ‘The’ placed before ‘<span style='color: darkblue;font-style:italic;'>Dead Sea</span>’ and ‘<span style='color: darkblue;font-style:italic;'>River Jordan</span>’ but not before ‘Jerusalem’?",
+
+                       " ●  <span style='background-color: yellow;color: blue;'> For example</span>, ‘<span style='color: blueviolet;font-style:italic;'>Dead</span>’ is a proper noun, followed by sea, a common noun in ‘Dead Sea’. <br><br> ● Isn't it obvious that we would have never understood whether a geographical feature or place is a river, sea, or forest until and unless its proper name follows its common category?  <br><br> ● <span style='background-color: yellow;color: blue;'> For example</span>, ‘Dead’ starting with a capital letter could mean the name of anything without us understanding what the name is for.", 
+
+                       " <span style='background-color:#A9EDCC;'>  Omission of article - Case 1 </span> <br><br> <span style='background-color:yellow;'>Singular names </span> of <span style='color: blueviolet;font-style:italic;'> continents, territories or countries, cities, states, towns, bays, lakes, mountains, islands,sports, languages, academic subjects </span> are <span style='background-color:aqua;'> not </span> denoted by the definite article <span style='color: blue;'> ‘the’.</span> <br> <br>● We know there’s only one continent called Asia/America/Europe so we don’t say ‘The Asia/TheAmerica’ or ‘The Europe’ <br>● We don’t say ‘the Cricket’ or ‘the French’, or ‘the Mathematics’.",
+
+                       "<span style='background-color:#A9EDCC;'>Inclusion of article ‘a/an’- Case-1 </span> <br><br>● The article ‘a/an’ is used before common nouns to denote that they are one in number. <br>● When common nouns are more in number, they are pluralised as per grammatical norms (boy becomes boys. Story becomes stories). <br>● ‘A’ is used before common nouns starting with a consonant sound as found in the article: <span style='color: blue;'> ‘a lake’</span>. <br>● ‘An’ is used before common nouns starting with a vowel sound, <br> <span style='background-color:yellow;color:blue;'> for example</span>: <span style='color: blue;'> ‘an orange’</span>",
+
+                       "Let us closely focus on the second paragraph of the article you are reading: <br><br><span style='color: blue;font-style:italic;'>Originally, the Dead Sea was about the same size as today. Then the climate of the area changed and became wetter. This change caused the Dead Sea to grow longer. However, after some time, the climate changed again, and the lake returned to its original size and shape.<span>",
+
+                       "<span style='background-color:#A9EDCC;'>Inclusion of article “the” Case 2:</span> <br><br>In, “<span style='color: blue;font-style:italic;'>Originally, the Dead Sea was about the same size as today</span>”, we find the definite article ‘<span style='color: blue;'>the</span>’ before ‘same size as today’. The Dead Sea had a particular size in the given past and we are referring back to the same particular size for the second time because the Dead Sea’s size has not changed. Here, ‘the’ is used because it refers to two particular things: <br><br> i)the size of a particular Sea - The Dead Sea <br> ii)the second reference to the past size of the Dead Sea",
+
+                       "<span style='background-color:#A9EDCC;'>Inclusion of article “the” Case 3:</span> <br><br>In the sentence below: <br><span style='color: blue;font-style:italic;'>Then the climate of the area changed and became wetter.</span><br><br>● Climate is a common noun. However, the definite article ‘the’ is used before the climate because the paragraph discusses the climate of a specific geographical area that surrounds the Dead Sea.",
+
+                       "●  <span style='color: blue;'>‘The’ </span> is always used before a common noun when it has already been mentioned before. A common noun becomes specific when we talk or write about it a second time. Thus, in order to give clarity that we are still talking, writing or reading about the same thing, we use <span style='color: blue;'> ‘the’ </span> to make the known common noun specific.<br> <br> <span style='background-color:yellow;color:blue;'> For example:</span> <br> Look at the sentences below: <br><i style='color: blueviolet;'>‘I saw a boy in the coffee shop today.”</i> <br> “Do you remember the boy from the coffee shop?” <br> <br>Here, <span style='color: blue;'> ‘a’ </span> is used before the common noun boy for the first time. <span style='color: blue;'> ‘The’ </span> is used before the common noun boy because here the boy is discussed for the second time and the people talking about him have already seen him before.",
+
+                       "We can notice that the indefinite article <span style='color: blue;'> ‘an’ </span> is used before the adverb ‘extremely’ because ‘extremely’ is indirectly referring to the noun ‘waterbody’ (waterbody here refers to the Dead Sea) by modifying the adjective ‘deep’ which in turn modifies the ‘waterbody, the Dead Sea. Thus, ‘extremely’ is a part of the noun equivalent ‘an extremely deep waterbody’. If ‘extremely’ was not used indirectly to describe the noun and was just used as an adverb without any connection to the noun, the indefinite article <span style='color: blue;'> ‘an’ </span> would not have been used before it.",
+
+                       "<span style='background-color:#A9EDCC;'>Inclusion of article ‘an’- Case-1 </span> <br><br>● Indefinite article ‘an’ is always used with common nouns. When a noun or a part of the common noun equivalent starts with a vowel sound, only then the indefinite article ‘an’ is used before it, as found in the article <span style='color: blue;font-style:italic;'> “......so it is quite small but  <span style='background-color:aqua;'> an extremely </span> deep water body.”</span>",
+
+                       "The Dead Sea is one of the saltiest lakes in the world. One litre of seawater may contain up to 327 grams of salt. With so much salt in the water, no fish or flora can survive in the Dead Sea. However, for people who love swimming, it's the ideal place to relax. And the salt in the water makes it easy to swim without any effort at all! <br><br> There is not much rainfall in this part of the world. It usually rains only between October and March. The temperatures vary depending on the area you look at. In the northern parts of the Dead Sea winter temperatures reach only about 14 °C; however, in August it can get up to 34 °C in the south. The highest recorded temperature for this region is 51 °C.",
+
+                       "In the sentence above, the definite article <span style='color: blue;font-style:italic;'>  ‘the’ </span> is used before the superlative adjective  <span style='color: blue;font-style:italic;'>“saltiest</span> and <span style='color: blue;font-style:italic;'>“highest,” </span> <br><br> ● Since, superlative adjectives express the highest degree of a certain quality, the definite article  ‘the’ is placed before them to regard the sense of superiority that they carry in them. <br><br> <span style='background-color:yellow;color:blue;'> For example</span>: <br>Sara is   <span style='color: blue;font-style:italic;'>  the smartest </span> child in this group.",
+
+                       " <img src='14th.jpg' style='width: 100%;' alt=''>",
+
+                       "<span style='background-color:#A9EDCC;'>Omission of article “the” Case 3: </span> <br><br>The sentence below talks about the months during which it rains in the Dead Sea area. <br> <span style='color: blue;font-style:italic;'>It usually rains only between October and March. </span> <br><br>● As you can notice, even though the names of months are proper nouns, <span style='color: blue;'> ‘the’ </span> is not used before them or before the name of any day in a week.",
+
+                       "The <span style='background-color:yellow;color:blue;'> examples </span> from the recent paragraphs that you have just read, shows the usage of the definite article ‘the’ to indicate something particular : <br><br>i)With so much salt in the water, no fish or flora can survive in the Dead Sea. However, for people who love swimming, it's the ideal place to relax. And the salt in the water makes it easy to swim without any effort at all! <br> <br> ii)The temperatures vary depending on the area you look at. iii)In the northern parts of the Dead Sea winter temperatures reach only about 14 °C; however, in August it can get up to 34 °C in the south.",
+
+                       "Nearly twenty years ago there was a plan to build a canal between the Dead Sea and the Mediterranean. This would make the level of the water in the Dead Sea go up. However, the cost of doing this is so enormous that the project cannot go ahead yet.",
+
+                       " <span style='background-color:yellow;color:blue;'>PQ: </span> <br><br>1) Please identify the use of an indefinite article in this paragraph. <br><br>2) Please give examples from the recent paragraph that you have just read which shows the usage of the definite article ‘the’ to indicate something particular.",
+
+
+                       "• <i> <span style='font-weight:bolder;'> Subject names are not preceded by articles </span> </i> <br><br> <span style='color: blueviolet;'>Eg.</span> I am amazed to see my son’s love for architecture. <br><br>• <i> <span style='font-weight:bolder;'> Articles are omitted when words like ‘life’, ‘death’, ‘nature’, ‘science’ etc. are used in a general sense </span> </i> <br><br> <span style='color: blueviolet;'> Eg. </span> Death is certain. <br><br>• <i> <span style='font-weight:bolder;'> Articles do not precede the names of meals like breakfast, dinner, supper, lunch,brunch, etc.. </span></i><br><br> <span style='color: blueviolet;'>Eg. </span> Where did you eat lunch?",
+
+                       "• <u> Words that begin with the ‘You’ sound (soumd of Yx`) start with a vowel but do not produce a vowel sound.</u> <br><br>‘You’ sound(sound of Y) is a consonant sound and thus ‘a’ is used in these cases. <br><br>1.  <span style='color: blue;font-style:italic;'> A union  </span>  <br>2.  <span style='color: blue;font-style:italic;'> A European vacation  </span> <br>3.  <span style='color: blue;font-style:italic;'> A URL </span> <br>4.  <span style='color: blue;font-style:italic;'>A eulogy  </span>",
+
+                       "• <u> Words starting with a W Sound:</u><br>Words starting with the letter ‘o’ but producing a W-sound are not preceded by the definite article ‘the’. The W-sound is not a vowel sound rather a consonant sound and thus the article ‘a’ is used in these cases. <br><br>  <span style='background-color:yellow;color:blue;'>Examples </span> <br>1. That is <span style='color: blue;font-style:italic;'> a one </span>-time password. <br>2. Spending one week like a cowboy was <span style='color: blue;font-style:italic;'> a once-in-a-lifetime </span> experience. <br>3. Both team members had <span style='color: blue;font-style:italic;'> a one-on-one </span> discussion yesterday.<br>",
+
+                       "• Words starting with a silent H-letter always begin with the consecutive vowel sound. Thus,the article ‘an’ is used before them: <br><br> <span style='background-color:yellow;color:blue;'> Example </span> <br>1. This is just <span style='color: blue;font-style:italic;'> an honorary </span> designation. <br>2. <span style='color: blue;font-style:italic;'> An heir </span> <br>3. <span style='color: blue;font-style:italic;'> An hourglass </span> <br>",
+
+                       "• <u>    While mentioning a specific person or object, 'the' is used.</u> <br><br> <span style='background-color:yellow;color:blue;'>Example: </span> <br>1. <span style='color: blue;font-style:italic;'> The architect </span> you wanted to meet this week will be available next month. (Which architect? The one you wanted to meet this week.) <br> <br>2. Go to <span style='color: blue;'> the library</span>. (In which library? Perhaps, the local one or the one which has already been discussed before)",
+
+                       "• <u> Before the titles of certain books </u><br><br><span style='background-color:yellow;color:blue;'>Example: </span> <br> The <span style='color: blue;font-style:italic;'> Odyssey, The Vedas </span> etc. are two examples. <br><br>• <u> Before superlative adjectives </u><br><br><span style='background-color:yellow;color:blue;'>Examples:</span><br>1. My father has never eaten <span style='color: blue;font-style:italic;'> the most delicious </span> Indian dish.<br>2. Which river is  <span style='color: blue;font-style:italic;'>the widest </span> river in the world?",
+
+                       "• <u>  Before musical instruments  </u><br><br>Examples: <br>1. He plays <span style='color: blue;font-style:italic;'> the violin </span> just like his grandfather. <br>2. Roger loves to listen to <span style='color: blue;font-style:italic;'> the ukulele.</span><br>",
+
+                      
+
+                    ]
+            
+
+
+
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "The Dead Sea";
+                    document.getElementById("story").innerHTML = "<span style='background-color:#A9EDCC;'>A second reminder! </span> <br><span style='font-weight:bolder;'>Use of Indefinite Articles: A and AN </span> <br>Indefinite articles refer to nouns without modifying or defining them. They usually sit before unspecific and unknown common nouns. <br><br> ● ‘An’ is always used before a word that starts with a vowel sound whereas ‘a’ is always used before a word that starts with a consonant sound.<br> <br> For instance: <br> 1. Did the tailor make <span style='color: blue;font-style:italic;'> a pocket </span> in my trousers?  <br><span style='color:darkgreen;'>‘P’ in ‘Pocket’ produces a consonant sound.<br></span> 2.Are you scared of <span style='color: blue;font-style:italic;'> an ant </span>? <br><span style='color:darkgreen;'>‘A’ in ‘Ant’ produces a vowel sound.</span>"
+                    
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="The Dead Sea"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+          
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Articles"
+                    document.getElementById("story").innerHTML = ' We often notice the following sitting in front of nouns or their equivalents in a sentence: <br> ● <span style="color: blue;">&nbsp;&nbsp;&nbsp;A</span>  <br>●  <span style="color: blue;">&nbsp;&nbsp;&nbsp;AN</span> <br>● <span style="color: blue;">&nbsp;&nbsp;&nbsp;THE</span> <br><br>They are called  <span style="background-color: yellow;color: blue;"> articles </span>, and they are grouped under the part of speech called: <span style="color: blueviolet;font-style: italic;">  DETERMINERS </span>'
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="The Dead Sea"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
